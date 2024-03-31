@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .function-box {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .function-name {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .function-output {
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Function Examples</h1>
+        <div class="function-box">
+            <div class="function-name">sayHello()</div>
+            <div class="function-output">Hello</div>
+        </div>
+
+        <div class="function-box">
+            <div class="function-name">sayGoodbye()</div>
+            <div class="function-output">Goodbye</div>
+        </div>
+
+        <div class="function-box">
+            <div class="function-name">sayWelcome()</div>
+            <div class="function-output">Welcome</div>
+        </div>
+
+        <script>
+            // Function declaration
+            function sayHello() {
+                document.write("Hello");
+            }
+
+            // Function expression
+            const sayGoodbye = function () {
+                document.write("Goodbye");
+            };
+
+            // Arrow function
+            const sayWelcome = () => {
+                document.write("Welcome");
+            };
+
+           
+            (function () {
+                console.log("IIFE executed");
+            })();
+
+            sayHello(); 
+            sayGoodbye();
+            sayWelcome(); 
+
+            // Function with parameters
+            function greet(name) {
+                console.log(`Greetings, ${name}!`);
+            }
+
+            greet("John");
+
+            // Function with default parameter
+            function greetDefault(name = "user") {
+                document.write(`Greetings, ${name}!`);
+            }
+
+            greetDefault(); 
+            greetDefault("Alice"); 
+
+            // Function returning a value
+            function add(a, b) {
+                return a + b;
+            }
+
+            const result = add(3, 5);
+            console.log("Result of addition:", result); 
+
+            // Recursive function
+            function factorial(n) {
+                if (n === 0 || n === 1) {
+                    return 1;
+                } else {
+                    return n * factorial(n - 1);
+                }
+            }
+
+            console.log("Factorial of 5:", factorial(5)); 
+
+            // Callback function
+            function fetchData(callback) {
+                setTimeout(() => {
+                    const data = "Some data";
+                    callback(data);
+                }, 2000);
+            }
+
+            function processData(data) {
+                console.log("Data received:", data);
+            }
+
+            fetchData(processData); 
+        </script>
+    </div>
+</body>
+
+</html>
