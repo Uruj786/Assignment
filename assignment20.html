@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript is Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .console {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .console p {
+            margin: 5px 0;
+            padding: 0;
+        }
+        .log {
+            color: #2ecc71;
+        }
+        .warn {
+            color: #f39c12;
+        }
+        .error {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript is Love...</h1>
+        <div class="console">
+            <p class="error">Error: error 4005</p>
+            <p class="log">This is used to write in the JavaScript console</p>
+            <p class="warn">This is used for warning purposes</p>
+        </div>
+        <p>This is used to write on the HTML document: <strong>Hello World!</strong></p>
+    </div>
+    <script>
+        console.error('error 4005');
+        console.log('This is used to write in the JavaScript console');
+        console.warn("This is used for warning purposes");
+        document.write('<strong>This is used to write on the HTML document: </strong>Hello World!');
+    </script>
+</body>
+</html>
