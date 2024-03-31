@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .output {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="output" id="evenOddOutput"></div>
+    <div class="output" id="markOutput"></div>
+    <div class="output" id="votingOutput"></div>
+    <div class="output" id="positiveNegativeOutput"></div>
+    <div class="output" id="sumOutput"></div>
+
+    <script>
+        // Script 1
+        function checkEvenOdd() {
+            const num = parseInt(prompt("Enter the Number"));
+            const outputElement = document.getElementById("evenOddOutput");
+            if (num % 2 === 0) {
+                outputElement.textContent = `${num} is even`;
+                outputElement.style.color = "green";
+            } else {
+                outputElement.textContent = `${num} is odd`;
+                outputElement.style.color = "red";
+            }
+        }
+        checkEvenOdd();
+
+        // Script 2
+        function checkMark() {
+            const mark = 10;
+            const outputElement = document.getElementById("markOutput");
+            outputElement.textContent = "Hello Word";
+            if (mark == 20) {
+                outputElement.textContent += "<br>Eighty";
+            }
+            outputElement.textContent += "<br>Bye Bye";
+        }
+        checkMark();
+
+        // Script 3
+        function checkVotingEligibility() {
+            const age = 15;
+            const outputElement = document.getElementById("votingOutput");
+            if (age >= 18) {
+                outputElement.textContent = 'You are eligible to vote';
+                outputElement.style.color = "green";
+            } else {
+                outputElement.textContent = 'You are not eligible to vote';
+                outputElement.style.color = "red";
+            }
+        }
+        checkVotingEligibility();
+
+        // Script 4
+        function checkPositiveNegative() {
+            const num = parseInt(prompt("Enter the number"));
+            const outputElement = document.getElementById("positiveNegativeOutput");
+            if (num < 0) {
+                outputElement.textContent = `${num} is a negative number`;
+                outputElement.style.color = "red";
+            } else {
+                outputElement.textContent = `${num} is a positive number`;
+                outputElement.style.color = "green";
+            }
+        }
+        checkPositiveNegative();
+
+        // Script 5
+        function calculateSum() {
+            const num1 = parseInt(prompt('Enter the first number'));
+            const num2 = parseInt(prompt('Enter the second number'));
+            const sum = num1 + num2;
+            const outputElement = document.getElementById("sumOutput");
+            outputElement.textContent = `Sum: ${sum}`;
+            outputElement.style.color = "blue";
+        }
+        calculateSum();
+    </script>
+</body>
+</html>
