@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+        }
+
+        .container {
+            height: fit-content;
+            width: 50%;
+            border: 2px solid #FC00FF;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 150px;
+            box-shadow: 2px 2px 1px #00DBDE;
+
+
+        }
+
+        input {
+            width: 70%;
+            padding: 8px;
+        }
+
+        button {
+            display: block;
+            padding: 8px;
+            margin: 8px;
+            width: 180px;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            cursor: pointer;
+
+            color: aliceblue;
+        }
+        span{
+            display: block;
+            font-weight: bold;
+            
+        }
+        #answer{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Area Of the Rectangle</h1>
+       <span>Enter Number 1 :</span>  <br />
+        <input type="text" id="number1" placeholder="Enter the length of the Rectangle" /><br /><br />
+
+       <span>Enter Number 2 : </span> <br />
+        <input type="text" id="number2" placeholder="enter the breadth of Rectangle" /><br />
+        <br />
+
+        <p id="answer">Answer:</p>
+
+        <button type="button" onclick="Performmultiplay()">Perform multiplay</button>
+        <button type="button" onclick="resetmultiplay()">Reset multiplay</button>
+
+    </div>
+
+    <script>
+        const inputBox1 = document.getElementById("number1");
+        const inputBox2 = document.getElementById("number2");
+        const answertText = document.getElementById("answer");
+
+        function Performmultiplay() {
+            const len = parseInt(inputBox1.value);
+            const bre = parseInt(inputBox2.value);
+            const area = (len * bre);
+            answertText.innerText = `Answer : ${area}`;
+        }
+
+        function resetmultiplay() {
+            inputBox1.value = " ";
+            inputBox2.value = " ";
+            answertText.innerText = `Answer :`;
+        }
+    </script>
+</body>
+
+</html>
